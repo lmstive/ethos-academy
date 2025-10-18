@@ -1,0 +1,12 @@
+{
+  "name": "ETHOS JIU JITSU ACADEMY",
+  "short_name": "ETHOS Jiu Jitsu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d82121",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

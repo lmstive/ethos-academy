@@ -1,103 +1,214 @@
+"use client";
+import Header from "@/components/Header";
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      ,<Header />
+      {/* HERO */}
+      <section className="section">
+        <div className="container grid md:grid-cols-2 gap-10 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center md:text-left"
+          >
+            <p className="uppercase tracking-[0.3em] text-sm text-gray-500">
+              Bem-vindo à
+            </p>
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+              ETHOS <span className="text-brand">JIU JITSU</span> ACADEMY
+            </h1>
+            <p className="mt-4 text-gray-600">
+              Jiu-Jitsu Adulto & Kids • Muay-Thai • Treinos de segunda a sábado.
+            </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <Link
+                href="https://wa.me/5545998461866?text=Olá!%20Quero%20saber%20mais%20sobre%20as%20aulas%20da%20ETHOS."
+                className="btn"
+              >
+                WhatsApp (Paulo)
+              </Link>
+              <Link
+                href="https://wa.me/5545998112079?text=Olá!%20Quero%20saber%20mais%20sobre%20as%20aulas%20da%20ETHOS."
+                className="btn btn-outline"
+              >
+                WhatsApp (Jefferson)
+              </Link>
+            </div>
+
+            <div className="mt-6 text-sm text-gray-500">
+              Rua Jorge Lacerda, 1151 • Cascavel/PR
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex justify-center"
           >
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo.png"
+              alt="ETHOS Jiu Jitsu Academy"
+              width={420}
+              height={420}
+              priority
+              className="rounded-2xl shadow"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+<section className="section bg-white">
+  <div className="container grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 className="text-3xl font-bold mb-4">Nossa filosofia</h2>
+      <p className="text-gray-600 leading-relaxed">
+        A <strong>ETHOS Jiu Jitsu Academy</strong> é mais que uma academia — é uma comunidade. 
+        Aqui, cultivamos respeito, disciplina e evolução constante dentro e fora do tatame.
+        Treinamos Jiu-Jitsu para fortalecer corpo e mente, com aulas para todas as idades e níveis.
+      </p>
+      <Link href="/professores" className="btn mt-6">Conheça os professores</Link>
     </div>
+    <Image
+      src="/academia.jpg"
+      alt="Tatame da ETHOS"
+      width={600}
+      height={400}
+      className="rounded-2xl shadow"
+    />
+  </div>
+</section>
+
+
+
+<section className="section bg-white">
+  <div className="container text-center">
+    <h2 className="text-3xl font-bold mb-8">Modalidades</h2>
+    <div className="grid md:grid-cols-3 gap-8">
+      <div className="p-6 border rounded-2xl shadow-sm hover:shadow-md transition">
+        <h3 className="text-xl font-bold mb-2">Jiu-Jitsu Adulto</h3>
+        <p className="text-gray-600">Aulas para todos os níveis, com foco em técnica, resistência e mentalidade competitiva.</p>
+      </div>
+      <div className="p-6 border rounded-2xl shadow-sm hover:shadow-md transition">
+        <h3 className="text-xl font-bold mb-2">Jiu-Jitsu Kids</h3>
+        <p className="text-gray-600">Desenvolvimento físico e mental para crianças em um ambiente seguro e disciplinado.</p>
+      </div>
+      <div className="p-6 border rounded-2xl shadow-sm hover:shadow-md transition">
+        <h3 className="text-xl font-bold mb-2">Muay-Thai</h3>
+        <p className="text-gray-600">Treinos intensos de condicionamento físico e técnicas de combate tailandês.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* HORÁRIOS TEASER */}
+      <section className="section bg-gray-50">
+        <div className="container grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="rounded-2xl border bg-white p-6 shadow-sm">
+  <h3 className="text-xl font-bold mb-4">Grade de Aulas</h3>
+
+  <ul className="space-y-2 text-gray-700">
+    <li>
+      <strong>Segunda:</strong> 06:00–07:00 Jiu-Jitsu Adulto • 18:30–19:30 Jiu-Jitsu Kids • 19:30–21:00 Jiu-Jitsu Adulto
+    </li>
+    <li>
+      <strong>Terça:</strong> 19:00–20:00 Muay-Thai • 20:15–21:30 Jiu-Jitsu Adulto
+    </li>
+    <li>
+      <strong>Quarta:</strong> 06:00–07:00 Jiu-Jitsu Adulto • 18:30–19:30 Jiu-Jitsu Kids • 19:30–21:00 Jiu-Jitsu Adulto
+    </li>
+    <li>
+      <strong>Quinta:</strong> 19:00–20:00 Muay-Thai • 20:15–21:30 Jiu-Jitsu Adulto
+    </li>
+    <li>
+      <strong>Sexta:</strong> 19:30–21:00 Jiu-Jitsu Adulto
+    </li>
+    <li>
+      <strong>Sábado:</strong> 09:00–10:00 Jiu-Jitsu Adulto
+    </li>
+  </ul>
+
+  <p className="text-sm text-gray-500 mt-4">
+    *Horários sujeitos a alterações em feriados e eventos especiais.
+  </p>
+</div>
+
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-3">Horários de Aulas</h2>
+            <p className="text-gray-600 mb-6">
+              Temos treinos de **Jiu-Jitsu Adulto, Kids e Muay-Thai** ao longo
+              da semana. Clique abaixo para ver a grade completa e filtrar por
+              modalidade.
+            </p>
+            <Link href="/aulas" className="btn">Ver grade completa</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCALIZAÇÃO */}
+      <section className="section">
+        <div className="container">
+          <h2 className="text-3xl font-bold mb-6">Onde estamos</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border p-6">
+              <p className="text-gray-700">
+                <strong>Endereço:</strong> Rua Jorge Lacerda, 1151
+              </p>
+              <div className="mt-4 flex gap-3">
+                <a
+                  className="btn"
+                  href="https://www.google.com/maps/search/?api=1&query=Rua%20Jorge%20Lacerda%2C%201151"
+                  target="_blank"
+                >
+                  Traçar rota
+                </a>
+                <a className="btn btn-outline" href="tel:+5545998461866">
+                  Ligar
+                </a>
+              </div>
+            </div>
+            <iframe
+              className="w-full h-72 md:h-full rounded-2xl border"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Rua%20Jorge%20Lacerda%2C%201151&output=embed"
+            />
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-10 border-t">
+        <div className="container flex flex-col md:flex-row items-center justify-between gap-3">
+          <div className="text-sm text-gray-500">
+            © {new Date().getFullYear()} ETHOS Jiu Jitsu Academy
+          </div>
+          <div className="flex gap-3 text-sm">
+            <a
+              href="https://wa.me/5545998461866"
+              className="underline decoration-brand"
+              target="_blank"
+            >
+              WhatsApp Paulo (45) 99846-1866
+            </a>
+            <span className="text-gray-300">•</span>
+            <a
+              href="https://wa.me/5545998112079"
+              className="underline decoration-brand"
+              target="_blank"
+            >
+              WhatsApp Jefferson (45) 99811-2079
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
