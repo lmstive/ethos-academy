@@ -21,7 +21,7 @@ export default function SEO() {
     address: {
       "@type": "PostalAddress",
       streetAddress: "Rua Jorge Lacerda, 1151",
-      addressLocality: "Foz do Iguaçu",
+      addressLocality: "Cascavel",
       addressRegion: "PR",
       postalCode: "00000-000",
       addressCountry: "BR",
