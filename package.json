@@ -10,6 +10,7 @@
     "postbuild": "node ./node_modules/next-sitemap/dist/index.js"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "latest",
     "framer-motion": "latest",
     "lucide-react": "latest",

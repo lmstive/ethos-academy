@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Outfit } from "next/font/google";
 import SEO from "@/components/SEO";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -29,6 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <SEO />
         {children}
+        {/* Métricas de performance da Vercel */}
+        <SpeedInsights />
       </body>
     </html>
   );
