@@ -1,4 +1,3 @@
-// src/components/SEO.tsx
 import React from "react";
 
 /**
@@ -7,8 +6,9 @@ import React from "react";
  */
 export default function SEO() {
   const siteUrl =
-    (process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://example.com")
-      .replace(/\/$/, "");
+    (process.env.SITE_URL ||
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://example.com").replace(/\/$/, "");
 
   const data = {
     "@context": "https://schema.org",
@@ -32,7 +32,6 @@ export default function SEO() {
   return (
     <script
       type="application/ld+json"
-      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
