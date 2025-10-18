@@ -41,7 +41,7 @@ export default function ContatoClient() {
       </div>
 
       <div className="text-sm text-gray-600">
-        Endereço: Rua Jorge Lacerda, 1151 • Foz do Iguaçu/PR
+        Endereço: Rua Jorge Lacerda, 1151 • Cascavel/PR
       </div>
     </div>
   );
