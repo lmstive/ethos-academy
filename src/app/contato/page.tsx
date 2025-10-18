@@ -43,7 +43,7 @@ export default function ContatoPage() {
           <div className="border rounded-2xl p-6 bg-white shadow-sm">
             <h2 className="text-xl font-semibold">Endereço</h2>
             <p className="text-gray-700 mt-2">
-              <strong>Rua Jorge Lacerda, 1151</strong> • Cascavel/PR
+              <strong>Rua Jorge Lacerda, 1151</strong> • /PR
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <a

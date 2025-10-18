@@ -43,7 +43,7 @@ export default function HomePage() {
             </div>
 
             <div className="mt-6 text-sm text-gray-500">
-              Rua Jorge Lacerda, 1151 • Cascavel/PR
+              Rua Jorge Lacerda, 1151 • Cascavel - PR
             </div>
           </motion.div>
 
